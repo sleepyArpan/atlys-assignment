@@ -10,6 +10,7 @@ interface PostedCardProps {
     timePosted: string;
     commentsNumber: number;
     emoji: string;
+    isEdited?: boolean;
   };
 }
 
@@ -29,7 +30,7 @@ export default function PostedCard({
           <div className='flex flex-col'>
             <span className='text-gray-300 font-medium mb-1'>{user.name}</span>
             <span className='text-gray-400 font-medium mb-1 text-sm'>
-              {post.timePosted}
+              {post.timePosted} {post.isEdited && '• Edited'}
             </span>
           </div>
         </div>

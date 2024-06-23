@@ -16,15 +16,16 @@ const data = [
   {
     user: {
       id: '2',
-      name: 'Theresa Webb',
+      name: 'Marvin McKinney',
       profilePic: '/images/user-2.png',
     },
     post: {
       content:
         'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-      timePosted: '5 mins ago',
+      timePosted: '8 mins ago',
       commentsNumber: 24,
-      emoji: '👋',
+      emoji: '😞',
+      isEdited: true,
     },
   },
 ];
