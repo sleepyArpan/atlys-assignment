@@ -1,4 +1,5 @@
-import { Button, Card } from '../components';
+import { Button, Card, PostedCard } from '../components';
+import data from '../data';
 
 export default function Home() {
   return (
@@ -28,6 +29,13 @@ export default function Home() {
         </div>
         <Button className='mt-4 w-28 ml-auto'>Post</Button>
       </Card>
+      {data.map(postDetails => (
+        <PostedCard
+          post={postDetails.post}
+          user={postDetails.user}
+          key={postDetails.user.id}
+        />
+      ))}
     </>
   );
 }
