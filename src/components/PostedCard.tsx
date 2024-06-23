@@ -2,7 +2,7 @@ import Card from './Card';
 import chatIcon from '../assets/chat-icon.svg';
 import hamburgerIcon from '../assets/hamburger-icon.svg';
 
-interface PostedCardProps {
+type PostedCardProps = {
   className?: string;
   user: { name: string; profilePic: string };
   post: {
@@ -12,7 +12,7 @@ interface PostedCardProps {
     emoji: string;
     isEdited?: boolean;
   };
-}
+};
 
 export default function PostedCard({
   className = '',

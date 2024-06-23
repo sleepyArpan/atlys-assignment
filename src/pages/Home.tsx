@@ -1,7 +1,10 @@
-import { Button, Card, PostedCard } from '../components';
+import { useState } from 'react';
+import { Button, Card, Dialog, PostedCard } from '../components';
 import data from '../data';
 
 export default function Home() {
+  const [showLoginModal, setShowLoginModal] = useState(false);
+
   return (
     <>
       <h1 className='mt-10 text-gray-300 text-2xl font-medium'>Hello Jane</h1>
@@ -27,7 +30,11 @@ export default function Home() {
             placeholder='How are you feeling today?'
           />
         </div>
-        <Button className='mt-4 w-28 ml-auto'>Post</Button>
+        <Button
+          className='mt-4 w-28 ml-auto'
+          onClick={() => setShowLoginModal(true)}>
+          Post
+        </Button>
       </Card>
       {data.map(postDetails => (
         <PostedCard
@@ -36,6 +43,10 @@ export default function Home() {
           key={postDetails.user.id}
         />
       ))}
+      <Dialog
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
+      />
     </>
   );
 }
