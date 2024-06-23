@@ -1,8 +1,26 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Home, Login, NotFound } from './pages';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />,
+  },
+  {
+    path: '/login',
+    element: <Login />,
+  },
+  {
+    path: '*',
+    element: <NotFound />,
+  },
+]);
+
 function App() {
   return (
-    <div className='bg-black h-screen w-screen'>
-      <div className='underline text-gray-300 text-3xl'>Hello world!</div>
-    </div>
+    <main className='bg-black h-screen w-screen'>
+      <RouterProvider router={router} />
+    </main>
   );
 }
 
