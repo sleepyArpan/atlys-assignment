@@ -38,9 +38,7 @@ export default function PostedCard({
       </div>
       <div className='p-4 bg-black rounded-lg flex'>
         <div className='flex-shrink-0 w-12 h-12 rounded-full bg-gray-500 flex justify-center items-center mr-3'>
-          <span role='img' aria-label='chat'>
-            {post.emoji}
-          </span>
+          <span role='img'>{post.emoji}</span>
         </div>
         <span className='text-gray-400'>{post.content}</span>
       </div>
