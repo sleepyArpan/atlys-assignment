@@ -18,8 +18,10 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <main className='bg-black h-screen w-screen'>
-      <RouterProvider router={router} />
+    <main className='bg-black'>
+      <div className='mx-6 my-0 flex min-h-screen flex-col bg-pale text-xl text-dark lg:mx-auto lg:my-0 lg:max-w-4xl lg:text-lg'>
+        <RouterProvider router={router} />
+      </div>
     </main>
   );
 }
